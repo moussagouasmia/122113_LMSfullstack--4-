@@ -28,6 +28,9 @@ const App = () => {
       {/* Render Student Navbar only if not on educator routes */}
       {!isEducatorRoute && <Navbar />}
       <Routes>
+        <Route path="/" element={<Accueil />} /> {/* المسار للصفحة الرئيسية */}
+        <Route path="/about" element={<QuiSommesNous />} /> {/* المسار لصفحة "من نحن" */}
+        <Route path="/contact" element={<Contact />} /> {/* المسار لصفحة "اتصل بنا" */}
         <Route path="/" element={<Home />} />
         <Route path="/course/:id" element={<CourseDetails />} />
         <Route path="/course-list" element={<CoursesList />} />
@@ -39,6 +42,7 @@ const App = () => {
           <Route path='/educator' element={<Dashboard />} />
           <Route path='add-course' element={<AddCourse />} />
           <Route path='my-courses' element={<MyCourses />} />
+          
           <Route path='student-enrolled' element={<StudentsEnrolled />} />
         </Route>
       </Routes>
