@@ -9,7 +9,7 @@ const CallToAction = () => {
       <div className='flex items-center font-medium gap-6 mt-4'>
         <button className='px-10 py-3 rounded-md text-white bg-blue-600'>Commencer</button>
         <button className='flex items-center gap-2'>
-          Learn more
+          Découvrez-en plus
           <img src={assets.arrow_icon} alt="arrow_icon" />
         </button>
       </div>
