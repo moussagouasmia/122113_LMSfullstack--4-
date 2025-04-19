@@ -58,8 +58,8 @@ const Navbar = () => {
           </button>}
       </div>
       {/* For Phone Screens */}
-      <div className='md:hidden flex items-center gap-2 sm:gap-5 text-gray-500'>
-        <div className="flex items-center gap-1 sm:gap-2 max-sm:text-xs">
+      <div className='md:hidden flex items-left gap-2 sm:gap-5 text-gray-500'>
+        <div className="flex items-left gap-1 sm:gap-2 max-sm:text-xs">
           <Link to='/'>Accueil</Link>
           | <Link to='/about'>Qui sommes-nous</Link>
           | <Link to='/contact'>Pour nous contacter</Link>
