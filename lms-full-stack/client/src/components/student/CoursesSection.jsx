@@ -9,7 +9,7 @@ const CoursesSection = () => {
 
   return (
     <div className="py-16 md:px-40 px-8">
-      <h2 className="text-3xl font-medium text-gray-800">Learn from the best</h2>
+      <h2 className="text-3xl font-medium text-gray-800">Choisissez la qualité RBM pour vos projets</h2>
       <p className="md:text-base text-sm text-gray-500 mt-3">
         
 Explorez notre gamme de services les mieux évalués : refroidissement, électricité, réseaux – conçus pour votre succès opérationnel.
