@@ -9,7 +9,8 @@ const Footer = () => {
         <div className="flex flex-col md:items-start items-center w-full">
           <img src={assets.logo_dark} alt="logo" />
           <p className="mt-6 text-center md:text-left text-sm text-white/80">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+            
+Du refroidissement industriel aux réseaux intelligents et aux solutions énergétiques avancées, RBM Company est votre partenaire idéal. Tous droits réservés © [Année]..
           </p>
         </div>
 
