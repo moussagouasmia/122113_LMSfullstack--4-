@@ -18,11 +18,14 @@ const Navbar = () => {
   const { user } = useUser()
 
   const becomeEducator = async () => {
+
     try {
+
       if (isEducator) {
         navigate('/educator')
         return;
       }
+
       const token = await getToken()
       const { data } = await axios.get(backendUrl + '/api/educator/update-role', { headers: { Authorization: `Bearer ${token}` } })
       if (data.success) {
@@ -31,6 +34,7 @@ const Navbar = () => {
       } else {
         toast.error(data.message)
       }
+
     } catch (error) {
       toast.error(error.message)
     }
@@ -41,13 +45,12 @@ const Navbar = () => {
       <img onClick={() => navigate('/')} src={assets.logo} alt="Logo" className="w-28 lg:w-32 cursor-pointer" />
       <div className="md:flex hidden items-center gap-5 text-gray-500">
         <div className="flex items-center gap-5">
-          <button onClick={() => navigate('/')}>الرئيسية</button>
-          <button onClick={() => navigate('/services')}>خدماتنا</button>
-          <button onClick={() => navigate('/contact')}>تواصل معنا</button>
-          {user && <>
-            | <button onClick={becomeEducator}>{isEducator ? 'Educator Dashboard' : 'Become Educator'}</button>
-            | <Link to='/my-enrollments' >My Enrollments</Link>
-          </>}
+          {
+            user && <>
+              <button onClick={becomeEducator}>{isEducator ? 'Educator Dashboard' : 'Become Educator'}</button>
+              | <Link to='/my-enrollments' >My Enrollments</Link>
+            </>
+          }
         </div>
         {user
           ? <UserButton />
@@ -58,13 +61,10 @@ const Navbar = () => {
       {/* For Phone Screens */}
       <div className='md:hidden flex items-center gap-2 sm:gap-5 text-gray-500'>
         <div className="flex items-center gap-1 sm:gap-2 max-sm:text-xs">
-          <button onClick={() => navigate('/')}>الرئيسية</button>
-          | <button onClick={() => navigate('/services')}>خدماتنا</button>
-          | <button onClick={() => navigate('/contact')}>تواصل معنا</button>
-          {user && <>
-            | <button onClick={becomeEducator}>{isEducator ? 'Educator Dashboard' : 'Become Educator'}</button>
-            | <Link to='/my-enrollments' >My Enrollments</Link>
-          >}
+          <button onClick={becomeEducator}>{isEducator ? 'Educator Dashboard' : 'Become Educator'}</button>
+          | {
+            user && <Link to='/my-enrollments' >My Enrollments</Link>
+          }
         </div>
         {user
           ? <UserButton />
