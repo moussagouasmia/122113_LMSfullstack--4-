@@ -15,8 +15,9 @@ import { ToastContainer } from 'react-toastify'
 import Player from './pages/student/Player'
 import MyEnrollments from './pages/student/MyEnrollments'
 import Loading from './components/student/Loading'
-import Accueil from './components/pages/student/Accueil'
-
+import Accueil from './pages/student/Accueil'
+import Contact from './pages/student/Contact'
+import QuiSommeNous from './pages/student/QuiSommeNous'
 const App = () => {
 
   const isEducatorRoute = useMatch('/educator/*');
