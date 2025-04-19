@@ -1,7 +1,7 @@
 import React from 'react';
 import { assets } from '../../assets/assets';
 import SearchBar from '../../components/student/SearchBar';
-import rbmPowerInnovationImage from '../../assets/header_img.png'; // تأكد من المسار الصحيح
+import { header_img } from '../../assets/header_img.png'; // تأكد من المسار الصحيح
 
 const Hero = () => {
   return (
