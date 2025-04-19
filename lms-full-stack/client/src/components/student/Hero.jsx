@@ -1,9 +1,11 @@
 import React from 'react';
 import { assets } from '../../assets/assets';
 import SearchBar from '../../components/student/SearchBar';
-import rbmPowerInnovationImage from '../../assets/header_img.png'; // استيراد مباشر كـ module
 
 const Hero = () => {
+  // استخدم require() لاستيراد الصورة
+  const rbmPowerInnovationImage = require('../../assets/header_img.png');
+
   return (
     <div className="flex flex-col items-center justify-center w-full min-h-36 pt-20 md:px-8 space-y-7 text-center bg-gradient-to-b from-cyan-100/70">
       <div className="md:text-home-heading-large text-home-heading-small relative font-bold text-gray-800 max-w-3xl mx-auto flex items-center"> {/* استخدم flex هنا */}
